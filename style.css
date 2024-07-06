@@ -1,0 +1,184 @@
+* {
+    margin: 0%;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root {
+    --primary-color: #071952;
+    --secondary-color: #EBF4F6;
+    --tertiary-color: #088395;
+    --quarteary-color: #37B7C3;
+    --link-hover-color: rgba(8, 131, 149, 0.8);
+}
+
+.portfolio-logo {
+    flex: 2;
+    height: 4rem;
+    background-color: var(--secondary-color);
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+.portfolio-header {
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+.person-name {
+    font-family: "Ga Maamli", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: var(--secondary-color);
+    flex: 9;
+}
+
+.portfolio-nav {
+    position: relative;
+    margin: 0rem;
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: end;
+    font-size: larger;
+    padding: 10px;
+}
+
+.domain-items {
+    display: flex;
+    list-style: none;
+    margin-left: -3rem;
+}
+
+.domain-item a {
+    padding: 5px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-left: 0.5rem;
+    position: relative;
+    z-index: 1;
+    margin-right: 0.5rem;
+}
+
+.domain-item a:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--link-hover-color);
+}
+
+.domain-items .item {
+    border-right: 2px solid var(--secondary-color);
+}
+
+.portfolio-section {
+    position: relative;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.resume-link-wrapper {
+    margin: auto;
+    height: 3%;
+    width: 5%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    flex: 1;
+
+    .resume-link {
+        text-decoration: none;
+        color: var(--tertiary-color);
+        font-size: 1em;
+    }
+
+}
+
+.resume-link-wrapper:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--link-hover-color);
+
+    .resume-link {
+        color: var(--secondary-color);
+    }
+}
+
+.portfolio-section {
+    display: flex;
+}
+
+.portfolio-section .portfolio-aside {
+    flex: 2;
+}
+
+.portfolio-section .portfolio-article {
+    flex: 10;
+}
+
+.portfolio-fotter {
+    height: 5em;
+    background-color: var(--tertiary-color);
+}
+
+.portfolio-section-home {
+    color: var(--secondary-color);
+    position: relative;
+    height: 50vh;
+    background-color: var(--primary-color);
+
+    .home-content {
+        padding: 2em;
+        width: 50%;
+
+        h1 {
+            margin: 1%;
+        }
+
+        p {
+            margin: 1%;
+        }
+
+        overflow: hidden;
+    }
+
+    .home-education-experience-wrapper {
+        .home-education {}
+
+        .home-experience {}
+    }
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .person-name {
+        display: none;
+    }
+
+    .portfolio-header {
+        justify-content: space-between;
+    }
+
+    .portfolio-logo-wrapper, .resume-link-wrapper {
+        flex: 1; 
+        display: inline-block;
+        height: 2rem;
+        .portfolio-logo {
+            height: 2rem;
+        }
+    }
+
+    .portfolio-nav {
+        font-size: smaller;
+    }
+
+}
